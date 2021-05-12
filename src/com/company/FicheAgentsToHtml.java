@@ -18,7 +18,7 @@ public class FicheAgentsToHtml {
         html.append("<header>");
         html.append("    <div id=\"header\">");
         html.append("        <h4 id=\"titre\">FICHE AGENT</h4>");
-        html.append("        <img src=\"IMAGES/logo.png\" alt=\"\" id=\"logo\" width=\"171\" /> ");
+        html.append("        <img src=\"../images/logo.png\" alt=\"\" id=\"logo\" width=\"171\" /> ");
         html.append("        <a href=\"../index.html\"><img id=\"accueil\" width=\"80\" src=\"../images/accueil.png\"/></a>");
         html.append("    </div>");
         html.append("</header>");
