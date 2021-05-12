@@ -11,6 +11,7 @@ public class FicheAgentsToHtml {
         html.append( "<head>\n" );
         html.append( "<meta charset='utf-8'>\n" );
         html.append( "<title>Fiche Agent</title>\n" );
+<<<<<<< HEAD
         html.append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
         html.append("<link href=\"http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" rel=\"stylesheet\">");
         html.append("<link rel=\"stylesheet\" href=\"../stylesheet.css\">");
@@ -70,6 +71,31 @@ public class FicheAgentsToHtml {
         html.append("</script>");
         html.append("</body>");
         html.append("</html>");
+=======
+        html.append( "<link rel=\"stylesheet\" href=\"../stylesheet.css\">" );
+        html.append( "</head>\n\n" );
+        html.append( "<body>\n" );
+        String ID = agents.getPrenom().charAt(0) + agents.getNom();
+        html.append("<h1> "+
+                 agents.getNom()  +" " +  agents.getPrenom() +"\n" +
+                "<img class=\"photo\" src=\"../images/"+ ID.toLowerCase() +".jpg\" />\n" +
+                "\n" +
+                "</h1>\n");
+        html.append("<div id=\"materiel\">\n");
+        html.append("<table id=\"tablemateriel\">\n");
+        html.append("<tr>\n" +
+                "\t    <th width=\"250\"></td>\n" +
+                "\t    <th width=\"50\"></td>\n" +
+                "\t  </tr>\n");
+        for ( String objet : agents.getObjet()) {
+            html.append( "<tr> <td> "+ objet + "</td> <td><img id=\"case\" src=\"../images/image2.png\"/> </td> </tr>\n" );
+        }
+        html.append( "</table>\n" );
+        html.append( "</div>\n" );
+        html.append( "</body>\n\n" );
+        html.append( "</html>" );
+
+>>>>>>> 9ff88d8717e2543799457ef44060a3354da9f966
         return html.toString();
     }
 }
