@@ -74,7 +74,7 @@ public class Main {
 
         PrintWriter FS = null;
         try {
-            FS = new PrintWriter(new FileOutputStream("html/index.html"));
+            FS = new PrintWriter(new FileOutputStream("index.html"));
         } catch (FileNotFoundException e) {
             System.out.println("errreur d'ouverture de index.html");
             System.exit(0);
@@ -128,7 +128,7 @@ public class Main {
             for (String IDAgent : listeIdAgent) {
 
                 try {
-                    FSFicheAgent = new PrintWriter(new FileOutputStream(IDAgent + ".html"));
+                    FSFicheAgent = new PrintWriter(new FileOutputStream("html/" +IDAgent + ".html"));
                 } catch (FileNotFoundException e) {
                     System.out.println("errreur d'ouverture de cberthier.html");
                     System.exit(0);

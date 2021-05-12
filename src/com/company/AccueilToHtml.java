@@ -17,7 +17,7 @@ public String render( String[] IDAgents) {
         html.append( "<ul>\n" );
         // Loop the list of reports passed as argument.
         for ( String idagent : IDAgents) {
-            html.append( "<li> <a href= \"html/" + idagent + ".html> "+ idagent + "</a>  </li>\n" );
+            html.append( "<li> <a href= \"html/" + idagent + ".html\">"+ idagent + "</a>  </li>\n" );
         }
         html.append( "</ul>\n" );
         html.append( "</body>\n\n" );
