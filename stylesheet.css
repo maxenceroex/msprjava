@@ -47,6 +47,10 @@ header{
     margin-top: -3%; 
 }
 
+a{
+    color: #659224;
+}
+
 /* nom */
 h4 {
 font-size : 32px;
@@ -101,7 +105,7 @@ table {
     bottom: 0;
 }
 
-.profile-header .profile-header-content,
+.profile-header .profile-header-content, .profile-header-content1,
 .profile-header-img, .profile-header-img,
 body .fc-icon { 
     position: relative;
@@ -111,6 +115,12 @@ body .fc-icon {
     color: #fff;
     padding: 1.25rem;
     height: 200px;
+}
+
+.profile-header-content1{
+    color: #fff;
+    padding: 1.25rem;
+    height: 80px;
 }
 
 .profile-header-img {

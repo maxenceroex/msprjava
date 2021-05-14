@@ -53,6 +53,10 @@ public class FicheCSS {
                 "    margin-top: -3%; \n" +
                 "}\n" +
                 "\n" +
+                "a{\n" +
+                "    color: #659224;\n" +
+                "}\n" +
+                "\n" +
                 "/* nom */\n" +
                 "h4 {\n" +
                 "font-size : 32px;\n" +
@@ -107,7 +111,7 @@ public class FicheCSS {
                 "    bottom: 0;\n" +
                 "}\n" +
                 "\n" +
-                ".profile-header .profile-header-content,\n" +
+                ".profile-header .profile-header-content, .profile-header-content1,\n" +
                 ".profile-header-img, .profile-header-img,\n" +
                 "body .fc-icon { \n" +
                 "    position: relative;\n" +
@@ -117,6 +121,12 @@ public class FicheCSS {
                 "    color: #fff;\n" +
                 "    padding: 1.25rem;\n" +
                 "    height: 200px;\n" +
+                "}\n" +
+                "\n" +
+                ".profile-header-content1{\n" +
+                "    color: #fff;\n" +
+                "    padding: 1.25rem;\n" +
+                "    height: 80px;\n" +
                 "}\n" +
                 "\n" +
                 ".profile-header-img {\n" +

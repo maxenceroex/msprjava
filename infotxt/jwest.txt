@@ -6,4 +6,3 @@ Agent de securite
 cyno
 talky
 lampe
-
