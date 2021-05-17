@@ -64,12 +64,15 @@ public class Main {
         List<String> listeDesgents = new ArrayList<>();
         PrintWriter FS = null;
         try {
+            //Création du fichier index.html
             FS = new PrintWriter(new FileOutputStream("index.html"));
         } catch (FileNotFoundException e) {
             System.out.println("erreur d'ouverture de index.html");
             System.exit(0);
         }
-        // récupération des id des agents via le fichier staff.txt
+        //Ouverture de l'accès en lecture au fichier staff.txt
+        //Récupération des ID de chagues agents dans le fichier staff.txt
+        //Dans un tableau de chaine de caractère
         try {
             BufferedReader FE = new BufferedReader(new FileReader("infotxt/staff.txt"));
 
@@ -81,13 +84,19 @@ public class Main {
         } catch (IOException e) {
             System.out.println("erreur lecture staff.txt");
         }
+        //Instanciation de l'objet AccueilToHtml
         AccueilToHtml accueilToHtml = new AccueilToHtml();
+        //Stockage de la chaine de caractère généré par la méthode render()
         String listeDesAgentsEnHtml = accueilToHtml.render((listeDesgents.toArray(new String[listeDesgents.size()])));
+        //Impression du code html généré dans le fichier index.html et fermeture de l'écriture du fichier
         FS.print(listeDesAgentsEnHtml);
         FS.close();
+        //Instanciation des objets Agents dans un tableaux d'agents
         Agent [] agentsInfos = creationAgent();
         PrintWriter FSFicheAgent = null;
         int idx = 0;
+        //Création d'un fichier .html pour tout les ID d'agents.
+        //Parcours du tableau d'agents pour créer a chacun une fiche agent en HTML
         for (String IDAgent : listeDesgents) {
             try {
                 FSFicheAgent = new PrintWriter(new FileOutputStream("html/" +IDAgent + ".html"));
@@ -95,20 +104,27 @@ public class Main {
                 System.out.println("errreur d'ouverture "+ IDAgent +".html");
                 System.exit(0);
             }
+            //Instanciation de l'objet FicheAgentsToHtml
             FicheAgentsToHtml ficheAgentsToHtml = new FicheAgentsToHtml();
+            //Stockage de la chaine de caractère généré par la méthode render() prends comme argumennt un objet Agents du tableau qu'on parcours
             String htmlFiche = ficheAgentsToHtml.render(agentsInfos[idx]);
+            //Impression du code html généré dans le fichier index.html et fermeture de l'écriture du fichier
             FSFicheAgent.print(htmlFiche);
             FSFicheAgent.close();
             idx++;
         }
         try {
+            //Création du fichier CSS contenant le style de notre application web
             FS = new PrintWriter(new FileOutputStream("stylesheet.css"));
         } catch (FileNotFoundException e) {
             System.out.println("errreur d'ouverture de stylesheet.css");
             System.exit(0);
         }
+        //Instanciation de l'objet FicheCSS()
         FicheCSS steelsheet   = new FicheCSS();
+        //Stockage de la chaine de caractère généré par la méthode render() prends comme argumennt un objet Agents du tableau qu'on parcours
         String css = steelsheet.render();
+        //Impression du code html généré dans le fichier style.css et fermeture de l'écriture du fichier
         FS.print(css);
         FS.close();
     }
