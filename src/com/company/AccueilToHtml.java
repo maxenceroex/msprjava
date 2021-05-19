@@ -11,7 +11,7 @@ public class AccueilToHtml {
                 html.append("    <meta charset=\"utf-8\">\n");
                 html.append("    <title>ACCUEIL</title>\n");
                 html.append("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
-                html.append("    <link href=\"http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+                html.append("    <link href=\"https://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
                 html.append("    <link rel=\"stylesheet\" href=\"stylesheet.css\">\n");
                 html.append("</head>\n");
                 html.append("<header>\n");
@@ -58,8 +58,8 @@ public class AccueilToHtml {
                 html.append("    </div>\n");
                 html.append("</div>\n");
                 html.append("</div>\n");
-                html.append("<script src=\"http://code.jquery.com/jquery-1.10.2.min.js\"></script>\n");
-                html.append("<script src=\"http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"></script>\n");
+                html.append("<script src=\"https://code.jquery.com/jquery-1.10.2.min.js\"></script>\n");
+                html.append("<script src=\"https://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"></script>\n");
                 html.append("<script type=\"text/javascript\">\n");
                 html.append("</script>\n");
                 html.append("</body>\n");
