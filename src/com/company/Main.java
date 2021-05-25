@@ -10,7 +10,8 @@ public class Main {
         try {
             //Ouverture de l'accès en lecture au fichier staff.txt
             //Récupération des ID de chagues agents dans le fichier staff.txt
-            //Dans un tableau de chaine de caractère
+            //Dans un liste de chaine de caractère
+            //Buffer : mémoire tampon
             BufferedReader FE = new BufferedReader(new FileReader("infotxt/staff.txt"));
             String ligne = null;
             //On créer une liste d'agent pour y stocker toutes les instances Agent qu'on crééra par la suite

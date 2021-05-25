@@ -4,6 +4,7 @@ public class AccueilToHtml {
 
         public String render( String[] IDAgents) {
 
+
                 StringBuilder html = new StringBuilder();
                 html.append("<!DOCTYPE html>\n");
                 html.append("<html lang=\"fr\">\n");
@@ -40,7 +41,7 @@ public class AccueilToHtml {
                 html.append("                        <table class=\"table table-profile\">\n");
                 html.append("                            <thead>\n");
                 html.append("                                <tr>\n");
-                html.append("                                    <th colspan=\"2\">Agents</th>\n");
+                html.append("                                    <th colspan=\"2\">Agents</th>\n ");
                 html.append("                                </tr>\n");
                 html.append("                            </thead>\n");
                 html.append("                            <tbody>\n");
