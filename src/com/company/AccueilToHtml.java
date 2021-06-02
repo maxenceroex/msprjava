@@ -2,7 +2,7 @@ package com.company;
 
 public class AccueilToHtml {
 
-        public String render( String[] IDAgents) {
+        public String render( Agent agentsTab[]) {
 
 
                 StringBuilder html = new StringBuilder();
@@ -45,10 +45,11 @@ public class AccueilToHtml {
                 html.append("                                </tr>\n");
                 html.append("                            </thead>\n");
                 html.append("                            <tbody>\n");
-                for ( String idagent : IDAgents) {
-                        html.append( "<tr>\n" +
-                                "        <td><a href= \"html/" + idagent + ".html\">"+ idagent + "</a></td>\n" +
-                                "</tr>\n" );
+                for (Agent agents : agentsTab) {
+                                String ID = agents.getPrenom().charAt(0) + agents.getNom();
+                                html.append("<tr>\n" +
+                                        "        <td><a href= \"html/" + ID.toLowerCase() + ".html\">" + agents.getNom() + " " + agents.getPrenom() + "</a></td>\n" +
+                                        "</tr>\n");
                 }
                 html.append("                            </tbody>\n");
                 html.append("                        </table>\n");

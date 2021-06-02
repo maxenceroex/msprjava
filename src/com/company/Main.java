@@ -87,13 +87,15 @@ public class Main {
         }
         //Instanciation de l'objet AccueilToHtml
         AccueilToHtml accueilToHtml = new AccueilToHtml();
+        //Instanciation des objets Agents dans un tableaux d'agents
+        Agent [] agentsInfos = creationAgent();
         //Stockage de la chaine de caractère généré par la méthode render()
-        String listeDesAgentsEnHtml = accueilToHtml.render((listeDesgents.toArray(new String[listeDesgents.size()])));
+        String listeDesAgentsEnHtml = accueilToHtml.render(agentsInfos);
         //Impression du code html généré dans le fichier index.html et fermeture de l'écriture du fichier
         FS.print(listeDesAgentsEnHtml);
         FS.close();
         //Instanciation des objets Agents dans un tableaux d'agents
-        Agent [] agentsInfos = creationAgent();
+        //Agent [] agentsInfos = creationAgent();
         PrintWriter FSFicheAgent = null;
         int idx = 0;
         //Création d'un fichier .html pour tout les ID d'agents.
